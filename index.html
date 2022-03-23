@@ -5,39 +5,56 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulário</title>
+        <style>
+            body {
+                display: inline-block;
+            }
+        </style>
     </head>
     <body>
         <form>
-            <label for="">Nome:</label> <br><br>
-            <input type="text" name="nomeAluno"><br><br>
-            <label for="">Sobrenome:</label> <br><br>
-            <input type="text" name="sobrenomeAluno"><br><br>
-            <label for="">Idade:</label> <br><br>
-            <input type="number" name="idadeAluno"><br><br>
-            <label for="">Data de Nascimento:</label><br><br>
-            <input type="date" name="nascimentoAluno"><br><br>
-            <label for="">SEXO:</label><br><br>
-            <input type="radio" name="sexo" value="Feminino">Feminino
-            <input type="radio" name="sexo" value="Masculino">Masculino
-            <input type="radio" name="sexo" value="Outro">Outro:
-            <input type="text" name="" ><br><br>
-            <Label>Idioma:</Label><br><br>
-            <input type="checkbox" name="" >Espanhol
-            <input type="checkbox" name="" id="">Inglês
-            <input type="checkbox" name="" id="">Russo
-            <input type="checkbox" name="" id="">Alemão
-            <br><br>
-            <label for="">Período:</label>
-            <select name="" id="">
+            <h2>Formulário de Matricula</h2>
+
+            <label for="nomeAluno">Nome:</label>
+            <input type="text" name="nomeAluno" id="nomeAluno" required autofocus placeholder="Primeiro Nome" pattern="[A-Z]{1}[a-z]{2,10}">
+
+            <label for="last">Sobrenome:</label> 
+            <input type="text" name="sobrenomeAluno" id="last">
+
+            <label for="age">Idade:</label>
+            <input type="number" name="idadeAluno" id="age" min="7" max="80" step="1">
+
+            <label for="nasc">Data de Nascimento:</label>
+            <input type="date" name="nascimentoAluno" id="nasc">
+
+            <label for="tele">Numero de Telefone:</label>
+            <input type="tel" name="numeroTel" id="tele">
+
+            <label>SEXO:</label>
+            <label><input type="radio" name="sexo" value="Feminino">Feminino</label>
+                <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
+                    <label><input type="radio" name="sexo" value="Outro">Outro:
+            <input type="text" name="" placeholder="suspeito"></label>
+
+            <Label>Idioma:</Label>
+            <label><input type="checkbox" name="" >Espanhol</label>
+            <label><input type="checkbox" name="" id="">Inglês</label>
+            <label><input type="checkbox" name="" id="">Russo</label>
+            <label><input type="checkbox" name="" id="">Alemão</label>
+            
+            <label for="Per">Período:</label>
+            <select name="" id="Per">
                 <option value="manha">Manhã</option>
                 <option value="tarde">Tarde</option>
                 <option value="noite">Noite</option>
-            </select><br><br>
-            <label for="">Email:</label><br><br>
-            <input type="email" name="email"><br><br>
-            <label for="">Senha:</label><br><br>
-            <input type="password" name="senha"><br><br>
-            <br><br>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha">
+         
             <input type="submit" value="Enviar">
             <input type="reset" value="Resetar">
         </form> 
